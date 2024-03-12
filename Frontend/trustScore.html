@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Calculation</title>
+  <link rel="stylesheet" href="trustScore.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trust Calculation</h1>
+    <div class="input-container">
+      <label for="deviceId">Device ID:</label>
+      <input type="text" id="deviceId" placeholder="Enter device ID">
+    </div>
+    <button id="calculateBtn">Calculate Trust Score</button>
+    <div id="output"></div>
+    <div id="errorMessage" class="error-message">Invalid device ID</div>
+  </div>
+  
+  <button class="logout-button" onclick="logout()">Logout</button>
+  <script>
+    function logout() {
+      // Perform logout actions here, such as clearing session storage or redirecting to a logout page
+      // For example, if using session storage:
+      sessionStorage.removeItem('loggedIn');
+      // Redirect to the login page
+      window.location.href = 'index.html';
+    }
+    </script>
+  <script src="script.js"></script>
+</body>
+</html>
